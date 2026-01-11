@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melissa | Decoración de Bodas y Eventos</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <a href="index.html">
+      <img src="assets/Icons/Logo_Melissa.png" alt="Logo Melissa" class="logo-img">
+      </a>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Sobre Melissa</a></li>
+        <li><a href="#">Nuestros Servicios</a></li>
+        <li><a href="#">Nuestros Trabajos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botón hamburguesa -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Melissa Decoración de Bodas y Eventos</h1>
+      <p>Transformamos momentos especiales en recuerdos inolvidables con estilo, elegancia y detalle.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Melissa. Todos los derechos reservados.</p>
+    <p>Web Creada por EGM Analytics .</p>
+    <a href="https://egmanalytics.com/" target="_blank">https://egmanalytics.com/</a>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("open");
+    });
+  </script>
+
+</body>
+</html>
+
