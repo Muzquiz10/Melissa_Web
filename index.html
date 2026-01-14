@@ -38,6 +38,32 @@
       <h1>Melissa Decoración de Bodas y Eventos</h1>
       <p>Transformamos momentos especiales en recuerdos inolvidables con estilo, elegancia y detalle.</p>
     </section>
+
+<!-- Sección de contacto -->
+<section id="contacto" class="contact-section">
+
+  <h2>Contacto</h2>
+  <p>¿Quieres decorar tu boda o evento con estilo y elegancia?</p>
+  <p>Cuéntanos tu idea y te responderemos lo antes posible.</p>
+
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/346XXXXXXXXX" target="_blank" class="btn-whatsapp">
+    Escríbenos por WhatsApp
+  </a>
+
+  <!-- Formulario -->
+  <form id="contact-form" class="contact-form" action="https://formspree.io/f/xyzabcde" method="POST">
+    <input type="text" name="Nombre" placeholder="Nombre" required>
+    <input type="text" name="Apellidos" placeholder="Apellidos" required>
+    <input type="email" name="Email" placeholder="Correo electrónico" required>
+    <textarea name="Mensaje" placeholder="¿En qué te podemos ayudar?" rows="4" required></textarea>
+    <button type="submit" class="btn-enviar">Enviar</button>
+    <p id="form-status" aria-live="polite"></p>
+  </form>
+
+</section>
+
+
   </main>
 
   <footer>
@@ -55,6 +81,8 @@
       hamburger.classList.toggle("open");
     });
   </script>
+
+  <script src="js/main.js"></script>
 
 </body>
 </html>

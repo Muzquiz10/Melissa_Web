@@ -134,3 +134,78 @@ footer {
   }
 }
 
+/* CONTACTO */
+.contact-section {
+  padding: 60px 40px;
+  text-align: center;
+  background-color: #fdfdfc;
+}
+
+.contact-section h2 {
+  color: #5a4b6f;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+  display: inline-block;
+  background-color: #25D366;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 25px 0;
+  transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background-color: #1ebc5c;
+}
+
+/* Formulario */
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: inherit;
+}
+
+.btn-enviar {
+  background-color: #c59fcf;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-enviar:hover {
+  background-color: #a88bb3;
+}
+
+#form-status {
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #5a4b6f;
+}
+
+
+
