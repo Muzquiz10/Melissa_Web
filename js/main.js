@@ -1,12 +1,11 @@
-const hamburger = document.getElementById("hamburger");
-const navLinks = document.querySelector(".nav-links");
+// const hamburger = document.getElementById("hamburger");
+// const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
-    hamburger.classList.toggle("open");
-});
+// hamburger.addEventListener("click", () => {
+//     navLinks.classList.toggle("active");
+//     hamburger.classList.toggle("open");
+// });
 
-<script>
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
 
@@ -32,4 +31,3 @@ hamburger.addEventListener("click", () => {
       status.textContent = "Error de conexión. Por favor, inténtalo más tarde.";
     }
   });
-</script>

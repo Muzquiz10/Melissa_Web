@@ -154,7 +154,7 @@ footer {
 /* Botón WhatsApp */
 .btn-whatsapp {
   display: inline-block;
-  background-color: #25D366;
+  background-color: #c59fcf;
   color: #fff;
   padding: 12px 25px;
   border-radius: 25px;
@@ -165,7 +165,7 @@ footer {
 }
 
 .btn-whatsapp:hover {
-  background-color: #1ebc5c;
+  background-color: #a88bb3;
 }
 
 /* Formulario */
@@ -206,6 +206,20 @@ footer {
   font-size: 0.9rem;
   color: #5a4b6f;
 }
+
+/* Prueba image hero */
+.hero-img {
+  margin-top: 30px;
+  width: 35%;
+  max-width: 900px;
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* */
 
 
 
