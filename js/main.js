@@ -1,10 +1,10 @@
-// const hamburger = document.getElementById("hamburger");
-// const navLinks = document.querySelector(".nav-links");
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.querySelector(".nav-links");
 
-// hamburger.addEventListener("click", () => {
-//     navLinks.classList.toggle("active");
-//     hamburger.classList.toggle("open");
-// });
+hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("open");
+});
 
   const form = document.getElementById("contact-form");
   const status = document.getElementById("form-status");
@@ -31,3 +31,24 @@
       status.textContent = "Error de conexión. Por favor, inténtalo más tarde.";
     }
   });
+
+// Animación servicios al hacer scroll
+const serviceItems = document.querySelectorAll(".service-item");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("show");
+      }
+    });
+  },
+  {
+    threshold: 0.2
+  }
+);
+
+serviceItems.forEach(item => {
+  observer.observe(item);
+});
+

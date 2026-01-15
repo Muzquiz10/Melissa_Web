@@ -108,6 +108,112 @@ footer {
   color: #999;
 }
 
+/* SERVICES */
+.services-section {
+  padding: 80px 40px;
+  background-color: #f7f4f9;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.2rem;
+  color: #5a4b6f;
+  margin-bottom: 10px;
+}
+
+.services-intro {
+  max-width: 700px;
+  margin: 0 auto 60px;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+/* Service item layout */
+.service-item {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  max-width: 1100px;
+  margin: 0 auto 80px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+/* Alternar imagen/texto */
+.service-item:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.service-item img {
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.service-content {
+  width: 55%;
+  text-align: left;
+}
+
+.service-content h3 {
+  color: #5a4b6f;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+}
+
+.service-content p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+/* Visible on scroll */
+.service-item.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive services */
+@media (max-width: 900px) {
+  .service-item {
+    background-color: #fff;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  }
+
+  .service-item:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .service-item img {
+    width: 100%;
+    margin-bottom: 10px; /* 🔹 separación clara */
+    max-height: 320px; /* 🔹 altura máxima para imágenes */
+    max-width: 60%; /* 🔹 limitar ancho */
+    object-fit: cover; /* 🔹 mantener proporciones */
+  }
+
+  .service-content {
+    width: 100%;
+    text-align: center;
+    padding: 0 10px; /* 🔹 respiración lateral */
+  }
+
+  .service-content h3 {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    margin-bottom: 12px;
+  }
+
+  .service-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 900px) {
 
@@ -207,19 +313,7 @@ footer {
   color: #5a4b6f;
 }
 
-/* Prueba image hero */
-.hero-img {
-  margin-top: 30px;
-  width: 35%;
-  max-width: 900px;
-  border-radius: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
 
-/* */
 
 
 
