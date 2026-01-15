@@ -1,4 +1,4 @@
-/* Reset */
+/* ===================== RESET ===================== */
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +12,7 @@ body {
   line-height: 1.6;
 }
 
-/* HEADER */
+/* ===================== HEADER ===================== */
 header {
   background-color: #fff;
   padding: 15px 40px;
@@ -33,7 +33,7 @@ header {
   width: auto;
 }
 
-/* NAV */
+/* ===================== NAV ===================== */
 nav ul {
   list-style: none;
   display: flex;
@@ -51,7 +51,7 @@ nav a:hover {
   color: #c59fcf;
 }
 
-/* HAMBURGER BUTTON */
+/* ===================== HAMBURGER ===================== */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -66,7 +66,6 @@ nav a:hover {
   transition: 0.3s;
 }
 
-/* Animation when open */
 .hamburger.open span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
@@ -79,7 +78,7 @@ nav a:hover {
   transform: translateY(-8px) rotate(-45deg);
 }
 
-/* HERO */
+/* ===================== HERO ===================== */
 .hero {
   padding: 80px 40px;
   text-align: center;
@@ -94,21 +93,66 @@ nav a:hover {
 
 .hero p {
   font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
+/* ===================== ABOUT ===================== */
+.about-hero {
+  padding: 90px 40px;
+  background-color: #f7f4f9;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column; /* 🔹 imagen debajo */
+  align-items: center;
+  text-align: center;
+  gap: 40px;
+}
+
+.about-text h1 {
+  font-size: 2.4rem;
+  color: #5a4b6f;
+  margin-bottom: 20px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #555;
+  line-height: 1.8;
   max-width: 600px;
   margin: 0 auto;
 }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 30px 20px;
-  background-color: #fff;
-  border-top: 1px solid #eee;
-  font-size: 0.9rem;
-  color: #999;
+/* Imagen About */
+.team-photo {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 24px;
+  padding: 12px;
+  background-color: #f1eaf6;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+
+  /* Animación entrada */
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  transition: all 0.9s ease;
 }
 
-/* SERVICES */
+.team-photo.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.team-photo:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.22);
+}
+
+/* ===================== SERVICES ===================== */
 .services-section {
   padding: 80px 40px;
   background-color: #f7f4f9;
@@ -128,32 +172,28 @@ footer {
   font-size: 1.1rem;
 }
 
-/* Service item layout */
+/* Cada servicio */
 .service-item {
-  display: flex;
-  align-items: center;
-  gap: 50px;
-  max-width: 1100px;
+  max-width: 900px;
   margin: 0 auto 80px;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  display: flex;
+  flex-direction: column; /* 🔹 imagen siempre debajo */
+  align-items: center;
+  text-align: center;
+
   opacity: 0;
   transform: translateY(40px);
   transition: all 0.8s ease;
 }
 
-/* Alternar imagen/texto */
-.service-item:nth-child(even) {
-  flex-direction: row-reverse;
-}
-
-.service-item img {
-  width: 45%;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-}
-
-.service-content {
-  width: 55%;
-  text-align: left;
+.service-item.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .service-content h3 {
@@ -166,82 +206,19 @@ footer {
   color: #555;
   font-size: 1rem;
   line-height: 1.7;
+  max-width: 650px;
+  margin: 0 auto 25px;
 }
 
-/* Visible on scroll */
-.service-item.show {
-  opacity: 1;
-  transform: translateY(0);
+.service-item img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  object-fit: cover;
 }
 
-/* Responsive services */
-@media (max-width: 900px) {
-  .service-item {
-    background-color: #fff;
-    padding: 30px 25px;
-    border-radius: 14px;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  }
-
-  .service-item:nth-child(even) {
-    flex-direction: column;
-  }
-
-  .service-item img {
-    width: 100%;
-    max-height: 320px; /* 🔹 altura máxima para imágenes */
-    max-width: 72%; /* 🔹 limitar ancho */
-    margin: 0 auto 15px; /* centra la imange */
-    display: block;
-    object-fit: cover; /* 🔹 mantener proporciones */
-  }
-
-  .service-content {
-    width: 100%;
-    text-align: center;
-    padding: 0 10px; /* 🔹 respiración lateral */
-  }
-
-  .service-content h3 {
-    font-size: 1.6rem;
-    margin-top: 10px;
-    margin-bottom: 12px;
-  }
-
-  .service-content p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-  }
-}
-
-
-/* RESPONSIVE */
-@media (max-width: 900px) {
-
-  nav ul {
-    position: absolute;
-    top: 80px;
-    right: 0;
-    background-color: #fff;
-    flex-direction: column;
-    width: 200px;
-    padding: 20px;
-    gap: 15px;
-    border-left: 1px solid #eee;
-    border-bottom: 1px solid #eee;
-    display: none;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  .hamburger {
-    display: flex;
-  }
-}
-
-/* CONTACTO */
+/* ===================== CONTACTO ===================== */
 .contact-section {
   padding: 60px 40px;
   text-align: center;
@@ -258,7 +235,6 @@ footer {
   margin-bottom: 10px;
 }
 
-/* Botón WhatsApp */
 .btn-whatsapp {
   display: inline-block;
   background-color: #c59fcf;
@@ -290,7 +266,6 @@ footer {
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 6px;
-  font-family: inherit;
 }
 
 .btn-enviar {
@@ -301,7 +276,6 @@ footer {
   border-radius: 25px;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease;
 }
 
 .btn-enviar:hover {
@@ -314,7 +288,38 @@ footer {
   color: #5a4b6f;
 }
 
+/* ===================== FOOTER ===================== */
+footer {
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #fff;
+  border-top: 1px solid #eee;
+  font-size: 0.9rem;
+  color: #999;
+}
 
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 900px) {
+  nav ul {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    background-color: #fff;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    gap: 15px;
+    border-left: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    display: none;
+  }
 
+  nav ul.active {
+    display: flex;
+  }
 
+  .hamburger {
+    display: flex;
+  }
+}
 
