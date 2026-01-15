@@ -178,8 +178,8 @@ footer {
 @media (max-width: 900px) {
   .service-item {
     background-color: #fff;
-    padding: 25px 20px;
-    border-radius: 16px;
+    padding: 30px 25px;
+    border-radius: 14px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
   }
 
@@ -189,9 +189,10 @@ footer {
 
   .service-item img {
     width: 100%;
-    margin-bottom: 10px; /* 🔹 separación clara */
     max-height: 320px; /* 🔹 altura máxima para imágenes */
-    max-width: 60%; /* 🔹 limitar ancho */
+    max-width: 72%; /* 🔹 limitar ancho */
+    margin: 0 auto 15px; /* centra la imange */
+    display: block;
     object-fit: cover; /* 🔹 mantener proporciones */
   }
 
