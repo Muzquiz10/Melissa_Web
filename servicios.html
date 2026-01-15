@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Melissa | Decoración de Bodas y Eventos</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="logo-container">
+      <a href="index.html">
+      <img src="assets/Icons/Logo_Melissa.png" alt="Logo Melissa" class="logo-img">
+      </a>
+    </div>
+
+    <nav class="nav">
+      <ul class="nav-links">
+        <li><a href=index.html>Inicio</a></li>
+        <li><a href="#">Sobre Melissa</a></li>
+        <li><a href=servicios.html>Nuestros Servicios</a></li>
+        <li><a href="#">Nuestros Trabajos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <!-- Botón hamburguesa -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Melissa Decoración de Bodas y Eventos</h1>
+      <h2>Nuestros Servicios</h2>
+      <!-- Prueba imagen hero -->
+      <img src="assets\IMG\Bodas\bodas_7.png" alt="Decoración de bodas Melissa" class="hero-img">
+      <!--  -->
+    </section>
+
+<!-- Sección de contacto -->
+<section id="contacto" class="contact-section">
+
+  <h2>Contacto</h2>
+  
+  <p>¿Quieres decorar tu boda o evento con estilo y elegancia?</p>
+  <p>Cuéntanos tu idea y te responderemos lo antes posible.</p>
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/346XXXXXXXXX" target="_blank" class="btn-whatsapp">
+    Escríbenos por WhatsApp
+  </a>
+
+  <!-- Formulario -->
+  <form id="contact-form" class="contact-form" action="https://formspree.io/f/mjggkydk" method="POST">
+    <input type="text" name="Nombre" placeholder="Nombre" required>
+    <input type="text" name="Apellidos" placeholder="Apellidos" required>
+    <input type="email" name="Email" placeholder="Correo electrónico" required>
+    <textarea name="Mensaje" placeholder="¿En qué te podemos ayudar?" rows="4" required></textarea>
+    <button type="submit" class="btn-enviar">Enviar</button>
+    <p id="form-status" aria-live="polite"></p>
+  </form>
+
+</section>
+
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Melissa. Todos los derechos reservados.</p>
+    <p>Web Creada por EGM Analytics .</p>
+    <a href="https://egmanalytics.com/" target="_blank">https://egmanalytics.com/</a>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+      hamburger.classList.toggle("open");
+    });
+  </script>
+
+  <script src="js/main.js"></script>
+
+</body>
+</html>
