@@ -211,11 +211,16 @@ nav a:hover {
 }
 
 .service-item img {
-  width: 100%;
+  width: 50%;
   max-width: 420px;
   border-radius: 16px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-item img:hover {
+  transform: scale(1.03);
 }
 
 /* ===================== CONTACTO ===================== */
