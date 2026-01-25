@@ -256,6 +256,22 @@ nav a:hover {
   background-color: #a88bb3;
 }
 
+.btn-ventas {
+  display: inline-block;
+  background-color: #c59fcf;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 15px 0 35px 0;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ventas:hover {
+  background-color: #a88bb3;
+}
+
 /* Formulario */
 .contact-form {
   max-width: 600px;
@@ -327,4 +343,99 @@ footer {
     display: flex;
   }
 }
+
+
+/* PRODUCTOS / VENTAS */
+.product-item {
+  max-width: 420px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img {
+  width: 100%;
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+/* Botones carrusel */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 1.8rem;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.carousel-btn:hover {
+  background-color: #fff;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* Info producto */
+.product-info {
+  margin-top: 18px;
+}
+
+.product-info h3 {
+  color: #5a4b6f;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+/* Etiquetas */
+.badge {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.badge.venta {
+  background-color: #c59fcf;
+  color: #fff;
+}
+
+.badge.alquiler {
+  background-color: #a88bb3;
+  color: #fff;
+}
+
+.badge.ambos {
+  background-color: #5a4b6f;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-item {
+    max-width: 90%;
+  }
+}
+
 

@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Melissa | Decoración de Bodas y Eventos</title>
   <link rel="stylesheet" href="css/style.css" />
+
+<!-- favicon -->
+  <link rel="icon" href="assets/Icons/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/Icons/favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/Icons/favicons/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/Icons/favicons/apple-touch-icon.png">
+
+<!----------->
+
 </head>
 <body>
 
@@ -38,12 +47,59 @@
       <h1>Melissa Decoración de Bodas y Eventos</h1>
     </section>
 <section class="services-section">
-  <h2>Nuestros Servicios</h2>
+  <h2>Catálogo de Artículos venta y alquiler</h2>
   <p class="services-intro">
-    Diseñamos decoraciones únicas para cada ocasión, cuidando cada detalle para que tu evento sea inolvidable.
+    A continuación, encontrarás nuestro catálogo de artículos disponibles para la venta y alquiler, ideales para la decoración de bodas y eventos. Cada artículo ha sido seleccionado cuidadosamente para ofrecerte opciones elegantes y versátiles que se adaptan a diferentes estilos y temáticas.
   </p>
-
+  <p class ="services-intro">
+    Si estás interesado en algún artículo o deseas más información sobre precios y disponibilidad, no dudes en contactarnos a través de WhatsApp o del formulario de contacto.
   </main>
+
+<!-- Sección de productos -->
+<section class="product-item">
+
+<div class="carousel">
+  <button class="carousel-btn prev">‹</button>
+
+  <div class="carousel-track">
+    <img src="assets/IMG/varios/ventas_1.jpg" alt="Rueda decorativa">
+    <img src="assets/IMG/varios/ventas_2.jpg" alt="Rueda decorativa">
+  </div>
+  <button class="carousel-btn next">›</button>
+</div>
+
+<div class="product-info">
+  <h3>Rueda bicicleta floral decorativa</h3> 
+  <span class="badge alquiler">Producto en venta y alquiler</span>
+</div>
+
+</section>
+<!-- Para añadir más productos, copiar y pegar el bloque de código anterior y cambiar las imágenes y descripciones -->
+
+
+<!-- Sección de contacto -->
+<section id="contacto" class="contact-section">
+
+  <h2>Contacto</h2>
+  
+  <p>¿Quieres decorar tu boda o evento con estilo y elegancia?</p>
+  <p>Cuéntanos tu idea y te responderemos lo antes posible.</p>
+  <!-- Botón WhatsApp -->
+  <a href="https://wa.me/346XXXXXXXXX" target="_blank" class="btn-whatsapp">
+    Escríbenos por WhatsApp
+  </a>
+
+  <!-- Formulario -->
+  <form id="contact-form" class="contact-form" action="https://formspree.io/f/mjggkydk" method="POST">
+    <input type="text" name="Nombre" placeholder="Nombre" required>
+    <input type="text" name="Apellidos" placeholder="Apellidos" required>
+    <input type="email" name="Email" placeholder="Correo electrónico" required>
+    <textarea name="Mensaje" placeholder="¿En qué te podemos ayudar?" rows="4" required></textarea>
+    <button type="submit" class="btn-enviar">Enviar</button>
+    <p id="form-status" aria-live="polite"></p>
+  </form>
+
+</section>
 
   <footer>
     <p>&copy; 2026 Melissa. Todos los derechos reservados.</p>

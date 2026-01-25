@@ -2,10 +2,12 @@
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.querySelector(".nav-links");
 
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("active");
-  hamburger.classList.toggle("open");
-});
+if (hamburger && navLinks) {
+  hamburger.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+    hamburger.classList.toggle("open");
+  });
+}
 
 
 /* ===================== FORMULARIO CONTACTO ===================== */
@@ -41,7 +43,6 @@ if (form) {
 
 
 /* ===================== ANIMACIONES SCROLL ===================== */
-// Elementos animables
 const animatedElements = document.querySelectorAll(
   ".service-item, .team-photo"
 );
@@ -51,7 +52,7 @@ const scrollObserver = new IntersectionObserver(
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add("show");
-        scrollObserver.unobserve(entry.target); // 🔹 anima solo una vez
+        scrollObserver.unobserve(entry.target); // anima solo una vez
       }
     });
   },
@@ -63,4 +64,34 @@ const scrollObserver = new IntersectionObserver(
 animatedElements.forEach(element => {
   scrollObserver.observe(element);
 });
+
+
+/* ===================== CARRUSEL ARTÍCULOS (VENTAS) ===================== */
+const carousels = document.querySelectorAll(".carousel");
+
+if (carousels.length > 0) {
+  carousels.forEach(carousel => {
+    const track = carousel.querySelector(".carousel-track");
+    const images = track.querySelectorAll("img");
+    const prevBtn = carousel.querySelector(".prev");
+    const nextBtn = carousel.querySelector(".next");
+
+    let index = 0;
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${index * 100}%)`;
+    }
+
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % images.length;
+      updateCarousel();
+    });
+
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + images.length) % images.length;
+      updateCarousel();
+    });
+  });
+}
+
 
