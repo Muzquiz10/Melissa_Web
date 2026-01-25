@@ -437,5 +437,33 @@ footer {
     max-width: 90%;
   }
 }
+.carousel-track {
+  will-change: transform;
+}
 
+/* Precios producto */
+.product-prices {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
 
+.price {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #574a6c;
+}
+
+.price-nota {
+  width: 100%;
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #777;
+  text-align: center;
+  font-style: italic;
+
+}

@@ -69,29 +69,35 @@ animatedElements.forEach(element => {
 /* ===================== CARRUSEL ARTÍCULOS (VENTAS) ===================== */
 const carousels = document.querySelectorAll(".carousel");
 
-if (carousels.length > 0) {
-  carousels.forEach(carousel => {
-    const track = carousel.querySelector(".carousel-track");
-    const images = track.querySelectorAll("img");
-    const prevBtn = carousel.querySelector(".prev");
-    const nextBtn = carousel.querySelector(".next");
+carousels.forEach(carousel => {
+  const track = carousel.querySelector(".carousel-track");
+  const images = track.querySelectorAll("img");
+  const prevBtn = carousel.querySelector(".prev");
+  const nextBtn = carousel.querySelector(".next");
 
-    let index = 0;
+  let index = 0;
 
-    function updateCarousel() {
-      track.style.transform = `translateX(-${index * 100}%)`;
-    }
+  // 🔹 Si solo hay una imagen, ocultamos flechas y no activamos carrusel
+  if (images.length <= 1) {
+    prevBtn.style.display = "none";
+    nextBtn.style.display = "none";
+    return;
+  }
 
-    nextBtn.addEventListener("click", () => {
-      index = (index + 1) % images.length;
-      updateCarousel();
-    });
+  function updateCarousel() {
+    track.style.transform = `translateX(-${index * 100}%)`;
+  }
 
-    prevBtn.addEventListener("click", () => {
-      index = (index - 1 + images.length) % images.length;
-      updateCarousel();
-    });
+  nextBtn.addEventListener("click", () => {
+    index = (index + 1) % images.length;
+    updateCarousel();
   });
-}
+
+  prevBtn.addEventListener("click", () => {
+    index = (index - 1 + images.length) % images.length;
+    updateCarousel();
+  });
+});
+
 
 
