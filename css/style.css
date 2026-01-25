@@ -132,7 +132,7 @@ nav a:hover {
   width: 100%;
   max-width: 420px;
   border-radius: 24px;
-  padding: 12px;
+  padding: 6px;
   background-color: #f1eaf6;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
 
@@ -467,3 +467,62 @@ footer {
   font-style: italic;
 
 }
+
+/* ===== HERO CAROUSEL FADE (AJUSTADO) ===== */
+.hero-carousel {
+  position: relative;
+  width: 100%;
+  max-width: 800px;        /* ⬅ más contenido y elegante */
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 18px 45px rgba(0,0,0,0.55);
+}
+
+/* Proporción del carrusel */
+.hero-carousel-track {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 2;     /* ⬅ evita formato panorámico */
+}
+
+/* Imágenes */
+.hero-carousel-track img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  background-color: #a88bb3;  
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+
+/* Imagen activa */
+.hero-carousel-track img.active {
+  opacity: 1;
+}
+
+/* Overlay oscuro */
+.hero-carousel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+  border-radius: 24px;
+}
+
+/* Capas */
+.hero-carousel-track img {
+  z-index: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-carousel-track {
+    aspect-ratio: 4 / 3; 
+  }
+}
+
+

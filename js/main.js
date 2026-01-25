@@ -99,5 +99,23 @@ carousels.forEach(carousel => {
   });
 });
 
+/* ===================== HERO CAROUSEL AUTO ===================== */
+const heroImages = document.querySelectorAll(
+  ".hero-carousel-track img"
+);
+
+let currentHero = 0;
+
+// Mostrar la primera imagen
+heroImages[currentHero].classList.add("active");
+
+setInterval(() => {
+  heroImages[currentHero].classList.remove("active");
+  currentHero = (currentHero + 1) % heroImages.length;
+  heroImages[currentHero].classList.add("active");
+}, 2500); // tiempo entre imágenes
+
+
+
 
 
