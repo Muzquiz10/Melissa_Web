@@ -14,7 +14,7 @@ if (hamburger && navLinks) {
 const form = document.getElementById("contact-form");
 const status = document.getElementById("form-status");
 
-if (form) {
+if (form && status) {
   form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
@@ -44,43 +44,48 @@ if (form) {
 
 /* ===================== ANIMACIONES SCROLL ===================== */
 const animatedElements = document.querySelectorAll(
-  ".service-item, .team-photo"
+  ".service-item, .team-photo, .product-item"
 );
 
-const scrollObserver = new IntersectionObserver(
-  (entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("show");
-        scrollObserver.unobserve(entry.target); // anima solo una vez
-      }
-    });
-  },
-  {
-    threshold: 0.3
-  }
-);
+if (animatedElements.length > 0) {
+  const scrollObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+          observer.unobserve(entry.target); // anima solo una vez
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
 
-animatedElements.forEach(element => {
-  scrollObserver.observe(element);
-});
+  animatedElements.forEach(el => scrollObserver.observe(el));
+}
 
 
-/* ===================== CARRUSEL ARTÍCULOS (VENTAS) ===================== */
-const carousels = document.querySelectorAll(".carousel");
-
-carousels.forEach(carousel => {
+/* ===================== CARRUSEL UNIVERSAL ===================== */
+/*
+  ✔ Funciona para:
+    - Servicios
+    - Ventas / productos
+    - Cualquier carrusel futuro
+*/
+document.querySelectorAll(".carousel").forEach(carousel => {
   const track = carousel.querySelector(".carousel-track");
-  const images = track.querySelectorAll("img");
+  const images = track ? track.querySelectorAll("img") : [];
   const prevBtn = carousel.querySelector(".prev");
   const nextBtn = carousel.querySelector(".next");
 
   let index = 0;
 
-  // 🔹 Si solo hay una imagen, ocultamos flechas y no activamos carrusel
+  // Seguridad
+  if (!track || images.length === 0) return;
+
+  // 🔹 Si solo hay una imagen, ocultamos flechas
   if (images.length <= 1) {
-    prevBtn.style.display = "none";
-    nextBtn.style.display = "none";
+    if (prevBtn) prevBtn.style.display = "none";
+    if (nextBtn) nextBtn.style.display = "none";
     return;
   }
 
@@ -88,34 +93,38 @@ carousels.forEach(carousel => {
     track.style.transform = `translateX(-${index * 100}%)`;
   }
 
-  nextBtn.addEventListener("click", () => {
-    index = (index + 1) % images.length;
-    updateCarousel();
-  });
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      index = (index + 1) % images.length;
+      updateCarousel();
+    });
+  }
 
-  prevBtn.addEventListener("click", () => {
-    index = (index - 1 + images.length) % images.length;
-    updateCarousel();
-  });
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      index = (index - 1 + images.length) % images.length;
+      updateCarousel();
+    });
+  }
 });
 
-/* ===================== HERO CAROUSEL AUTO ===================== */
-const heroImages = document.querySelectorAll(
-  ".hero-carousel-track img"
-);
 
-let currentHero = 0;
+/* ===================== HERO CAROUSEL FADE AUTO ===================== */
+/*
+  ✔ Independiente del resto
+  ✔ No interfiere con otros carruseles
+*/
+const heroImages = document.querySelectorAll(".hero-carousel-track img");
 
-// Mostrar la primera imagen
-heroImages[currentHero].classList.add("active");
+if (heroImages.length > 0) {
+  let currentHero = 0;
 
-setInterval(() => {
-  heroImages[currentHero].classList.remove("active");
-  currentHero = (currentHero + 1) % heroImages.length;
   heroImages[currentHero].classList.add("active");
-}, 2500); // tiempo entre imágenes
 
-
-
-
+  setInterval(() => {
+    heroImages[currentHero].classList.remove("active");
+    currentHero = (currentHero + 1) % heroImages.length;
+    heroImages[currentHero].classList.add("active");
+  }, 3000);
+}
 
