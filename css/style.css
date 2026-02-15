@@ -606,7 +606,8 @@ footer {
 
 @keyframes expandHeart {
   to {
-    transform: rotate(-45deg) scale(25);
-    opacity: 0;
+    transform: rotate(-45deg) scale(15);
+    opacity: 0.75;
+    filter: blur(50px);
   }
 }
