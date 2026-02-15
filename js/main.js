@@ -128,3 +128,20 @@ if (heroImages.length > 0) {
   }, 3000);
 }
 
+/* ===================== INTRO CORAZÓN ABOUT US ===================== */
+
+const intro = document.getElementById("intro-animation");
+const heart = document.querySelector(".heart");
+
+if (intro && heart) {
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      heart.classList.add("expand");
+
+      setTimeout(() => {
+        intro.style.display = "none";
+      }, 1000);
+
+    }, 500); // tiempo que late antes de expandirse
+  });
+}

@@ -543,6 +543,70 @@ footer {
   aspect-ratio: 4 / 3;
 }
 
+/* ===== ANIMACION CORAZO ABOUTUS ===== */
 
+/* Capa inicial */
+#intro-animation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  overflow: hidden;
+}
 
+/* Corazón */
+.heart {
+  width: 100px;
+  height: 90px;
+  position: relative;
+  background: #594b6e;
+  transform: rotate(-45deg);
+  animation: heartbeat 1s ease-in-out infinite;
+}
 
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 90px;
+  position: absolute;
+  background: #594b6e;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+/* Latido */
+@keyframes heartbeat {
+  0% { transform: rotate(-45deg) scale(1); }
+  25% { transform: rotate(-45deg) scale(1.1); }
+  50% { transform: rotate(-45deg) scale(1); }
+  75% { transform: rotate(-45deg) scale(1.1); }
+  100% { transform: rotate(-45deg) scale(1); }
+}
+
+/* Expansión final */
+.expand {
+  animation: expandHeart 2.5s forwards;
+}
+
+@keyframes expandHeart {
+  to {
+    transform: rotate(-45deg) scale(25);
+    opacity: 0;
+  }
+}
