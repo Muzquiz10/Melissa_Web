@@ -611,3 +611,32 @@ footer {
     filter: blur(50px);
   }
 }
+
+/* ===================== REVIEWS ===================== */
+.reviews-section {
+  padding: 80px 40px;
+  background-color: #f7f4f9;
+  text-align: center;
+}
+
+.reviews-section h2 {
+  font-size: 2.2rem;
+  color: #5a4b6f;
+  margin-bottom: 15px;
+}
+
+.reviews-intro {
+  max-width: 650px;
+  margin: 0 auto 50px;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+.reviews-widget {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 30px;
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
