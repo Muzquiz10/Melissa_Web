@@ -96,24 +96,6 @@ nav a:hover {
   max-width: 650px;
   margin: 0 auto 30px;
 }
-/* ===================== CATALOGO ===================== */
-
-.catalog-section{
-  padding: 80px 40px;
-  text-align: center;
-  background-color: #f7f4f9;
-}
-.catalog-section h2 {
-  font-size: 2.2rem;
-  margin-bottom: 20px;
-  color: #5a4b6f;
-}
-.catalog-section p{
-  font-size: 1.2rem;
-  max-width: 650px;
-  margin: 0 auto 30px;
-}
-
 
 /* ===================== ABOUT ===================== */
 .about-hero {
@@ -657,4 +639,70 @@ footer {
   background-color: #fff;
   border-radius: 24px;
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.08);
+}
+
+/* ===================== CATALOGO ===================== */
+
+.catalog-section{
+  padding: 80px 40px;
+  text-align: center;
+  background-color: #fdfdfc;
+}
+
+.catalog-section h2{
+  color: #5a4b6f;
+  margin-bottom: 15px;
+}
+
+.catalog-section p{
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.catalog-pdf{
+  width: 100%;
+  max-width: 1100px;
+  height: 850px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.12);
+}
+
+.catalog-buttons{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.catalog-cover{
+  width: 100%;
+  max-width: 350px;
+  border-radius: 20px;
+  box-shadow: 0 12px 35px rgba(0,0,0,.15);
+  margin-bottom: 25px;
+}
+
+.catalog-mobile{
+  display: none;
+}
+
+.catalog-desktop{
+  display: block;
+}
+
+@media (max-width: 1024px){
+
+  .catalog-desktop{
+    display: none;
+  }
+
+  .catalog-mobile{
+    display: block;
+  }
+
+  .catalog-section{
+    padding: 60px 20px;
+  }
+
 }
