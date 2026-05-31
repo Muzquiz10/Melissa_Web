@@ -96,6 +96,24 @@ nav a:hover {
   max-width: 650px;
   margin: 0 auto 30px;
 }
+/* ===================== CATALOGO ===================== */
+
+.catalog-section{
+  padding: 80px 40px;
+  text-align: center;
+  background-color: #f7f4f9;
+}
+.catalog-section h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #5a4b6f;
+}
+.catalog-section p{
+  font-size: 1.2rem;
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
+
 
 /* ===================== ABOUT ===================== */
 .about-hero {
