@@ -145,3 +145,20 @@ if (intro && heart) {
     }, 500); // tiempo que late antes de expandirse
   });
 }
+
+  /* =========================
+     AÑOS DINÁMICOS
+  ========================= */
+
+  const yearSpan = document.getElementById("current-year");
+  if (yearSpan) {
+    yearSpan.textContent = new Date().getFullYear();
+  }
+  const yearSpanFooter = document.getElementById("current-year-footer");
+  if (yearSpanFooter) {
+    yearSpanFooter.textContent = new Date().getFullYear();
+  }
+  const nextYearSpan = document.getElementById("next-year");
+  if (nextYearSpan) {
+    nextYearSpan.textContent = new Date().getFullYear() + 1;
+  }
