@@ -64,6 +64,62 @@ if (animatedElements.length > 0) {
 }
 
 
+/* ===================== CATALOGO PDF ===================== */
+const catalogPdf = document.querySelector(".catalog-pdf[data-src]");
+
+if (catalogPdf) {
+  const desktopCatalogQuery = window.matchMedia("(min-width: 1025px)");
+  let catalogObserver = null;
+
+  const loadCatalogPdf = () => {
+    if (!catalogPdf.getAttribute("src")) {
+      catalogPdf.setAttribute("src", catalogPdf.dataset.src);
+    }
+  };
+
+  const unloadCatalogPdf = () => {
+    catalogPdf.removeAttribute("src");
+  };
+
+  const prepareCatalogPdf = () => {
+    if (catalogObserver) {
+      catalogObserver.disconnect();
+      catalogObserver = null;
+    }
+
+    if (!desktopCatalogQuery.matches) {
+      unloadCatalogPdf();
+      return;
+    }
+
+    if ("IntersectionObserver" in window) {
+      catalogObserver = new IntersectionObserver(
+        (entries, observer) => {
+          if (entries.some(entry => entry.isIntersecting)) {
+            loadCatalogPdf();
+            observer.disconnect();
+            catalogObserver = null;
+          }
+        },
+        { rootMargin: "350px 0px" }
+      );
+
+      catalogObserver.observe(catalogPdf);
+    } else {
+      loadCatalogPdf();
+    }
+  };
+
+  prepareCatalogPdf();
+
+  if (desktopCatalogQuery.addEventListener) {
+    desktopCatalogQuery.addEventListener("change", prepareCatalogPdf);
+  } else {
+    desktopCatalogQuery.addListener(prepareCatalogPdf);
+  }
+}
+
+
 /* ===================== CARRUSEL UNIVERSAL ===================== */
 /*
   ✔ Funciona para:

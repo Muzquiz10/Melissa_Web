@@ -13,7 +13,7 @@
 
   <meta property="og:title" content="Melissa Decoración de Bodas y Eventos">
   <meta property="og:description" content="Decoración elegante y personalizada para bodas, cumpleaños, bautizos y eventos especiales.">
-  <meta property="og:image" content="https://melissaeventos.es/assets/IMG/Bodas/bodas_1.jpg">
+  <meta property="og:image" content="https://melissaeventos.es/assets/IMG/Bodas/bodas_1.webp">
   <meta property="og:url" content="https://melissaeventos.es">
   <meta property="og:type" content="website">
 
@@ -42,8 +42,8 @@
   "@id": "https://melissaeventos.es",
   "name": "Melissa Decoración de Bodas y Eventos",
   "url": "https://melissaeventos.es",
-  "logo": "https://melissaeventos.es/assets/Icons/Logo_Melissa.png",
-  "image": "https://melissaeventos.es/assets/IMG/Bodas/bodas_1.jpg",
+  "logo": "https://melissaeventos.es/assets/Icons/Logo_Melissa.webp",
+  "image": "https://melissaeventos.es/assets/IMG/Bodas/bodas_1.webp",
   "description": "Decoración profesional de bodas, cumpleaños, bautizos, comuniones y eventos personalizados en España.",
   "telephone": "+34 685862950",
   "priceRange": "€€",
@@ -90,7 +90,7 @@
   <header>
     <div class="logo-container">
       <a href="index.html">
-      <img src="assets/Icons/Logo_Melissa.png" alt="Logo Melissa" class="logo-img" loading="lazy">
+      <img src="assets/Icons/Logo_Melissa.webp" alt="Logo Melissa" class="logo-img" loading="lazy">
       </a>
     </div>
 
@@ -133,24 +133,35 @@
   <!-- DESKTOP -->
   <div class="catalog-desktop">
     <iframe
-      src="assets/Catálogo_2025-2026.pdf#toolbar=1"
-      class="catalog-pdf">
+      data-src="assets/Catálogo_2025-2026.pdf#toolbar=1"
+      class="catalog-pdf"
+      loading="lazy"
+      title="Catálogo Melissa 2025-2026">
     </iframe>
   </div>
 
   <!-- MOVIL / TABLET -->
   <div class="catalog-mobile">
 
-    <img
-      src="assets/IMG/portada_catalogo.png"
-      alt="Catálogo Melissa"
-      class="catalog-cover">
+    <picture>
+      <source srcset="assets/IMG/portada_catalogo.webp" type="image/webp">
+      <img
+        src="assets/IMG/portada_catalogo.webp"
+        alt="Catálogo Melissa"
+        class="catalog-cover"
+        width="700"
+        height="410"
+        loading="lazy"
+        decoding="async">
+    </picture>
 
     <div class="catalog-buttons">
 
       <a
-        href="assets/Catálogo_2025-2026.pdf"
+        href="assets/Catalogo_2025-2026_mobile.pdf"
         target="_blank"
+        rel="noopener"
+        type="application/pdf"
         class="btn-whatsapp">
 
         Ver catálogo
@@ -158,19 +169,20 @@
       </a>
 
       <a
-        href="assets/Catálogo_2025-2026.pdf"
-        download
+        href="assets/Catalogo_2025-2026_mobile.pdf"
+        download="Catalogo_Melissa_2025-2026.pdf"
+        type="application/pdf"
         class="btn-whatsapp">
 
         Descargar catálogo
 
       </a>
+    </div>
+
     <p class="catalog-note">
   Catálogo actualizado con productos de decoración para bodas,
   cumpleaños, bautizos, comuniones y eventos personalizados.
     </p>
-
-    </div>
 
   </div>
 
@@ -185,16 +197,16 @@
     <!-- Carrusel automático -->
     <div class="hero-carousel">
       <div class="hero-carousel-track">
-        <img src="assets/IMG/Bodas/bodas_1.jpg" alt="Decoración de bodas" loading="lazy">
-        <img src="assets/IMG/varios/montando_2.jpg" alt="Decoración personalizada" loading="lazy">
-        <img src="assets/IMG/Bodas/bodas_2.png" alt="Decoración de eventos" loading="lazy">
-        <img src="assets/IMG/varios/montando_3.jpg" alt="Decoración cumpleaños" loading="lazy">
-        <img src="assets/IMG/varios/montando_4.jpg" alt="Decoración comuniones" loading="lazy">
-        <img src="assets/IMG/Bodas/bodas_3.jpg" alt="Decoración eventos privados" loading="lazy">
-        <img src="assets/IMG/varios/montando_5.jpg" alt="Decoración integral de eventos" loading="lazy">
-        <img src="assets/IMG/varios/Melissa_2.jpg" alt="Decoración integral bodas" loading="lazy">
-        <img src="assets/IMG/varios/montando_6.jpg" alt="Decoración con globos" loading="lazy">
-        <img src="assets/IMG/varios/montando_7.jpg" alt="Invitaciones de bodas virtuales" loading="lazy">
+        <img src="assets/IMG/Bodas/bodas_1.webp" alt="Decoración de bodas" loading="lazy">
+        <img src="assets/IMG/varios/montando_2.webp" alt="Decoración personalizada" loading="lazy">
+        <img src="assets/IMG/Bodas/bodas_2.webp" alt="Decoración de eventos" loading="lazy">
+        <img src="assets/IMG/varios/montando_3.webp" alt="Decoración cumpleaños" loading="lazy">
+        <img src="assets/IMG/varios/montando_4.webp" alt="Decoración comuniones" loading="lazy">
+        <img src="assets/IMG/Bodas/bodas_3.webp" alt="Decoración eventos privados" loading="lazy">
+        <img src="assets/IMG/varios/montando_5.webp" alt="Decoración integral de eventos" loading="lazy">
+        <img src="assets/IMG/varios/Melissa_2.webp" alt="Decoración integral bodas" loading="lazy">
+        <img src="assets/IMG/varios/montando_6.webp" alt="Decoración con globos" loading="lazy">
+        <img src="assets/IMG/varios/montando_7.webp" alt="Invitaciones de bodas virtuales" loading="lazy">
       </div>
     </div>
 

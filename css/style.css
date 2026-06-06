@@ -675,12 +675,24 @@ footer {
   flex-wrap: wrap;
 }
 
+.catalog-mobile picture{
+  display: inline-block;
+}
+
 .catalog-cover{
   width: 100%;
   max-width: 350px;
+  height: auto;
+  aspect-ratio: 700 / 410;
+  object-fit: cover;
   border-radius: 20px;
   box-shadow: 0 12px 35px rgba(0,0,0,.15);
   margin-bottom: 25px;
+}
+
+.catalog-note{
+  max-width: 680px;
+  margin: 24px auto 0;
 }
 
 .catalog-mobile{
