@@ -12,6 +12,10 @@ body {
   line-height: 1.6;
 }
 
+html {
+  scroll-padding-top: 96px;
+}
+
 /* ===================== HEADER ===================== */
 header {
   background-color: #fff;
@@ -20,7 +24,10 @@ header {
   justify-content: space-between;
   align-items: center;
   border-bottom: 1px solid #eee;
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
 .logo-container {
@@ -256,6 +263,38 @@ nav a:hover {
   background-color: #a88bb3;
 }
 
+.floating-whatsapp {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 1100;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  background-color: #25d366;
+  color: #fff;
+  padding: 0;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 12px 30px rgba(37, 211, 102, 0.35);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.floating-whatsapp-icon {
+  display: block;
+  width: 31px;
+  height: 31px;
+  fill: currentColor;
+}
+
+.floating-whatsapp:hover {
+  background-color: #1ebe5d;
+  box-shadow: 0 16px 34px rgba(37, 211, 102, 0.42);
+  transform: translateY(-3px);
+}
+
 .btn-ventas {
   display: inline-block;
   background-color: #c59fcf;
@@ -323,7 +362,7 @@ footer {
 @media (max-width: 900px) {
   nav ul {
     position: absolute;
-    top: 80px;
+    top: 100%;
     right: 0;
     background-color: #fff;
     flex-direction: column;
@@ -333,6 +372,7 @@ footer {
     border-left: 1px solid #eee;
     border-bottom: 1px solid #eee;
     display: none;
+    box-shadow: 0 16px 28px rgba(0, 0, 0, 0.08);
   }
 
   nav ul.active {
@@ -341,6 +381,22 @@ footer {
 
   .hamburger {
     display: flex;
+  }
+
+  header {
+    padding: 12px 20px;
+  }
+
+  .floating-whatsapp {
+    right: 16px;
+    bottom: 16px;
+    width: 54px;
+    height: 54px;
+  }
+
+  .floating-whatsapp-icon {
+    width: 29px;
+    height: 29px;
   }
 }
 
